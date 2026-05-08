@@ -9,12 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 html,body{
     width:100%;
@@ -172,6 +167,34 @@ html,body{
     font-size:30px;
 }
 
+/* PÁGINA 3 COM FOTO HARUO */
+
+.special-bg{
+    background:
+    linear-gradient(rgba(0,0,0,0.48),rgba(0,0,0,0.48)),
+    url('haruo.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.special-content{
+    background:rgba(255,255,255,0.13);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:30px;
+    padding:40px 28px;
+    color:white;
+}
+
+.special-content h2{
+    color:white;
+}
+
+.special-content .verse{
+    color:#5f4633;
+}
+
 /* CONTENT */
 
 .content{
@@ -305,7 +328,7 @@ html,body{
     font-size:18px;
 }
 
-/* FINAL COM FOTO */
+/* FINAL COM FOTO CINTIA */
 
 .final{
     background:
@@ -379,7 +402,6 @@ html,body{
 }
 
 }
-
 </style>
 </head>
 
@@ -424,8 +446,8 @@ html,body{
     </div>
 </section>
 
-<section class="page" id="page3">
-    <div class="content">
+<section class="page special-bg" id="page3">
+    <div class="content special-content">
 
         <h2>Mensagem Especial</h2>
 
@@ -625,7 +647,6 @@ html,body{
 </section>
 
 <script>
-
 function showPage(pageNumber){
     const pages = document.querySelectorAll('.page');
 
@@ -670,7 +691,6 @@ Agradeço pelo convite e será uma alegria celebrar esse momento tão especial c
 
     window.open(url,'_blank');
 }
-
 </script>
 
 </body>
