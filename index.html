@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Haruo & Cintia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:'Cormorant Garamond', serif;
+    background:#f5ede3;
+    color:#5f4633;
+}
+
+.page{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100vh;
+    overflow-y:auto;
+    display:none;
+    padding:25px;
+    justify-content:center;
+    align-items:center;
+}
+
+.page.active{
+    display:flex;
+    animation:fade 0.8s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ENVELOPE */
+
+.envelope-wrapper{
+    text-align:center;
+}
+
+.envelope-container{
+    position:relative;
+    width:360px;
+    height:250px;
+    margin:auto;
+    cursor:pointer;
+}
+
+.envelope{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#d8b89c;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,0.25);
+}
+
+.envelope:before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#c79e79;
+    clip-path:polygon(0 0,50% 55%,100% 0);
+    z-index:3;
+}
+
+.envelope:after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#b8875f;
+    clip-path:polygon(0 100%,50% 45%,100% 100%);
+    z-index:3;
+}
+
+.letter{
+    position:absolute;
+    width:88%;
+    height:88%;
+    left:6%;
+    top:6%;
+    background:#fffdf8;
+    border-radius:8px;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:0.6s;
+    padding:20px;
+}
+
+.envelope-container:hover .letter{
+    transform:translateY(-75px);
+}
+
+.letter h1{
+    font-family:'Great Vibes', cursive;
+    font-size:56px;
+    color:#9b6b43;
+    font-weight:normal;
+}
+
+.letter p{
+    font-size:22px;
+    margin-top:10px;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('foto-noivos.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero-card{
+    background:rgba(255,255,255,0.13);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:32px;
+    padding:45px 30px;
+    max-width:760px;
+    width:100%;
+    text-align:center;
+    color:white;
+}
+
+.couple-photo{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid rgba(255,255,255,0.85);
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+    margin-bottom:22px;
+}
+
+.hero-card h1{
+    font-family:'Great Vibes', cursive;
+    font-size:90px;
+    font-weight:normal;
+}
+
+.hero-card p{
+    font-size:28px;
+    margin-top:14px;
+}
+
+.date{
+    margin-top:25px;
+    font-size:34px;
+}
+
+/* CONTENT */
+
+.content{
+    max-width:950px;
+    width:100%;
+    text-align:center;
+}
+
+.content h2{
+    font-family:'Great Vibes', cursive;
+    font-size:72px;
+    color:#9b6b43;
+    margin-bottom:20px;
+    font-weight:normal;
+}
+
+.content p{
+    font-size:28px;
+    line-height:1.7;
+}
+
+.verse{
+    margin-top:35px;
+    background:white;
+    padding:28px;
+    border-radius:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    font-size:25px;
+    line-height:1.6;
+}
+
+/* BUTTONS */
+
+.nav-btn{
+    margin-top:35px;
+    display:inline-block;
+    background:#9b6b43;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:40px;
+    font-size:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    border:none;
+    cursor:pointer;
+}
+
+/* CARDS */
+
+.links-grid,
+.gifts{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:24px;
+    margin-top:40px;
+}
+
+.contact-card,
+.card,
+.pix-box{
+    background:white;
+    padding:30px 25px;
+    border-radius:28px;
+    text-decoration:none;
+    color:#5f4633;
+    box-shadow:0 12px 35px rgba(0,0,0,0.08);
+}
+
+.emoji,
+.icon{
+    font-size:50px;
+}
+
+.contact-card h3,
+.card h3{
+    margin-top:15px;
+    font-size:32px;
+}
+
+.contact-card p,
+.card p{
+    margin-top:12px;
+    font-size:22px;
+    line-height:1.5;
+}
+
+/* PIX */
+
+.pix-box{
+    margin-top:40px;
+}
+
+.pix-box h3{
+    font-size:40px;
+}
+
+.pix-input{
+    width:100%;
+    margin-top:18px;
+    padding:16px;
+    border-radius:14px;
+    border:2px solid #d4c1ae;
+    font-size:22px;
+    text-align:center;
+}
+
+.pix-key{
+    margin-top:18px;
+    background:#f8f2eb;
+    padding:18px;
+    border-radius:14px;
+    font-size:20px;
+    word-break:break-all;
+}
+
+.copy-btn{
+    margin-top:18px;
+    border:none;
+    background:#9b6b43;
+    color:white;
+    padding:16px 30px;
+    border-radius:14px;
+    cursor:pointer;
+    font-size:20px;
+}
+
+.copy-msg{
+    margin-top:12px;
+    color:green;
+    display:none;
+    font-size:20px;
+}
+
+/* FINAL */
+
+.final{
+    background:#9b6b43;
+    color:white;
+}
+
+.final-card{
+    text-align:center;
+    max-width:850px;
+}
+
+.final-card h2{
+    font-family:'Great Vibes', cursive;
+    font-size:86px;
+    font-weight:normal;
+}
+
+.final-card p{
+    margin-top:18px;
+    font-size:30px;
+    line-height:1.8;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.hero-card h1{
+    font-size:62px;
+}
+
+.hero-card p,
+.content p,
+.final-card p{
+    font-size:22px;
+}
+
+.content h2{
+    font-size:54px;
+}
+
+.letter h1{
+    font-size:48px;
+}
+
+.couple-photo{
+    width:135px;
+    height:135px;
+}
+
+.envelope-container{
+    width:320px;
+    height:225px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PÁGINA 1 -->
+
+<section class="page active" id="page1">
+
+    <div class="envelope-wrapper">
+
+        <div class="envelope-container" onclick="showPage(2)">
+
+            <div class="envelope"></div>
+
+            <div class="letter">
+                <h1>Haruo & Cintia</h1>
+                <p>Você recebeu um convite especial ❤️</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PÁGINA 2 -->
+
+<section class="page hero" id="page2">
+
+    <div class="hero-card">
+
+        <img src="foto-noivos.jpg" class="couple-photo">
+
+        <h1>Haruo & Cintia</h1>
+
+        <p>
+            Com alegria convidamos você para celebrar o nosso casamento
+        </p>
+
+        <div class="date">
+            13/06/2026 às 10:45h
+        </div>
+
+        <p style="margin-top:18px;font-size:24px;">
+            🍽️ Almoço oferecido pelos noivos às 12:00h
+        </p>
+
+        <p style="margin-top:20px;">
+            Churrascaria Boi Dourado — Curitiba/PR
+        </p>
+
+        <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-top:35px;">
+
+            <a class="nav-btn" href="#" onclick="showPage(1)">
+                ← Voltar
+            </a>
+
+            <a class="nav-btn" href="#" onclick="showPage(3)">
+                Próxima Página ✨
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PÁGINA 3 -->
+
+<section class="page" id="page3">
+
+    <div class="content">
+
+        <h2>Mensagem Especial</h2>
+
+        <p>
+            O amor é paciente, o amor é bondoso.
+            Não inveja, não se vangloria, não se orgulha.
+            Tudo sofre, tudo crê, tudo espera, tudo suporta.
+        </p>
+
+        <div class="verse">
+            ❤️ “Assim, eles já não são dois, mas sim uma só carne.
+            Portanto, o que Deus uniu, ninguém separe.” — Mateus 19:6
+        </div>
+
+        <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-top:35px;">
+
+            <a class="nav-btn" href="#" onclick="showPage(2)">
+                ← Voltar
+            </a>
+
+            <a class="nav-btn" href="#" onclick="showPage(4)">
+                Informações 💍
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PÁGINA 4 -->
+
+<section class="page" id="page4">
+
+    <div class="content">
+
+        <h2>Informações</h2>
+
+        <div class="links-grid">
+
+            <!-- CONFIRMAR PRESENÇA -->
+
+            <div class="contact-card">
+
+                <div class="emoji">✅</div>
+
+                <h3>Confirmar Presença</h3>
+
+                <p>
+                    Informe quantas pessoas irão ❤️
+                </p>
+
+                <input type="number"
+                       id="qtdPessoas"
+                       placeholder="Quantidade de pessoas"
+                       style="
+                       width:100%;
+                       margin-top:15px;
+                       padding:14px;
+                       border-radius:14px;
+                       border:2px solid #d8c2ad;
+                       font-size:20px;
+                       text-align:center;
+                       ">
+
+                <button class="copy-btn"
+                        style="margin-top:18px;width:100%;"
+                        onclick="confirmarPresenca()">
+
+                    Confirmar pelo WhatsApp ✨
+
+                </button>
+
+            </div>
+
+            <!-- LOCAL -->
+
+            <a class="contact-card"
+               href="https://maps.google.com/?q=Churrascaria+Boi+Dourado+Av.+Comendador+Franco+5085+Curitiba"
+               target="_blank">
+
+                <div class="emoji">📍</div>
+
+                <h3>Local da Festa</h3>
+
+                <p>
+                    Churrascaria Boi Dourado<br>
+                    Av. Comendador Franco, 5085<br>
+                    Uberaba — Curitiba/PR
+                </p>
+
+            </a>
+
+            <!-- FALE COM O NOIVO -->
+
+            <a class="contact-card"
+               href="https://wa.me/5541999850591?text=Olá Haruo! Vim pelo convite de casamento ❤️"
+               target="_blank">
+
+                <div class="emoji">🤵</div>
+
+                <h3>Fale com o Noivo</h3>
+
+                <p>
+                    Clique para conversar com Haruo ❤️
+                </p>
+
+            </a>
+
+            <!-- FALE COM A NOIVA -->
+
+            <a class="contact-card"
+               href="https://wa.me/5541988322892?text=Olá Cintia! Vim pelo convite de casamento ❤️"
+               target="_blank">
+
+                <div class="emoji">👰</div>
+
+                <h3>Fale com a Noiva</h3>
+
+                <p>
+                    Clique para conversar com Cintia ❤️
+                </p>
+
+            </a>
+
+            <!-- FALE COM OS NOIVOS -->
+
+            <a class="contact-card"
+               href="https://wa.me/5541988322892?text=Olá noivos! Vim pelo convite de casamento ❤️"
+               target="_blank">
+
+                <div class="emoji">💍</div>
+
+                <h3>Fale com os Noivos</h3>
+
+                <p>
+                    Clique para falar com os noivos ❤️
+                </p>
+
+            </a>
+
+        </div>
+
+        <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-top:35px;">
+
+            <a class="nav-btn" href="#" onclick="showPage(3)">
+                ← Voltar
+            </a>
+
+            <a class="nav-btn" href="#" onclick="showPage(5)">
+                Lista de Presentes 🎁
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PÁGINA 5 -->
+
+<section class="page" id="page5">
+
+    <div class="content">
+
+        <h2>Lista de Presentes</h2>
+
+        <p>
+            Sua presença já é nosso maior presente ❤️
+            <br>
+            Mas se desejar nos abençoar ainda mais,
+            você pode enviar qualquer valor via PIX.
+        </p>
+
+        <div class="gifts">
+
+            <div class="card">
+                <div class="icon">✈️</div>
+                <h3>Lua de Mel</h3>
+                <p>Ajude a tornar nossa viagem inesquecível ✨</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏡</div>
+                <h3>Novo Lar</h3>
+                <p>Um carinho para começarmos nossa vida juntos ❤️</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🍽️</div>
+                <h3>Jantar Especial</h3>
+                <p>Um presente simbólico cheio de amor 🍷</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛏️</div>
+                <h3>Enxoval</h3>
+                <p>Ajude os noivos no novo lar ✨</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🍳</div>
+                <h3>Cozinha Nova</h3>
+                <p>Um mimo especial para os noivos ❤️</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">😂</div>
+                <h3>Não Posso Ir</h3>
+                <p>Mande um PIX e será perdoado 😄</p>
+            </div>
+
+        </div>
+
+        <div class="pix-box">
+
+            <h3>💳 PIX dos Noivos</h3>
+
+            <input type="number"
+                   class="pix-input"
+                   placeholder="Digite o valor que deseja presentear">
+
+            <div class="pix-key" id="pixKey">
+56142977000106
+            </div>
+
+            <button class="copy-btn" onclick="copiarPix()">
+                Copiar Chave PIX ❤️
+            </button>
+
+            <div class="copy-msg" id="copyMsg">
+                PIX copiado com sucesso ✨
+            </div>
+
+        </div>
+
+        <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-top:35px;">
+
+            <a class="nav-btn" href="#" onclick="showPage(4)">
+                ← Voltar
+            </a>
+
+            <a class="nav-btn" href="#" onclick="showPage(6)">
+                Página Final ❤️
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PÁGINA FINAL -->
+
+<section class="page final" id="page6">
+
+    <div class="final-card">
+
+        <a class="nav-btn"
+           href="#"
+           onclick="showPage(5)"
+           style="background:white;color:#9b6b43;margin-bottom:30px;">
+
+            ← Voltar
+
+        </a>
+
+        <h2>Esperamos Você!</h2>
+
+        <p>
+            Será uma alegria compartilhar esse momento tão especial com você ❤️
+        </p>
+
+        <p>
+            Com carinho,<br>
+            Haruo & Cintia ✨
+        </p>
+
+        <div class="verse" style="color:#5f4633;">
+            “O amor nunca falha.” — 1 Coríntios 13:8 ❤️
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+function showPage(pageNumber){
+
+    const pages = document.querySelectorAll('.page');
+
+    pages.forEach(page => {
+        page.classList.remove('active');
+    });
+
+    document.getElementById('page' + pageNumber).classList.add('active');
+
+}
+
+function copiarPix(){
+
+    const pix = document.getElementById('pixKey').innerText.trim();
+
+    navigator.clipboard.writeText(pix);
+
+    const msg = document.getElementById('copyMsg');
+
+    msg.style.display = 'block';
+
+    setTimeout(()=>{
+        msg.style.display = 'none';
+    },2000);
+
+}
+
+function confirmarPresenca(){
+
+    const qtd = document.getElementById('qtdPessoas').value;
+
+    let mensagem = `Olá! Confirmo minha presença no casamento ❤️`;
+
+    if(qtd){
+        mensagem += `\nQuantidade de pessoas: ${qtd}`;
+    }
+
+    const url = `https://wa.me/5541988322892?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url,'_blank');
+
+}
+
+</script>
+
+</body>
+</html>
