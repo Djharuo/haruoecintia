@@ -43,21 +43,13 @@ html,body{
 }
 
 @keyframes fade{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
 }
 
 /* ENVELOPE */
 
-.envelope-wrapper{
-    text-align:center;
-}
+.envelope-wrapper{text-align:center;}
 
 .envelope-container{
     position:relative;
@@ -137,7 +129,6 @@ html,body{
     background:
     linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
     url('foto-noivos.jpg');
-
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -314,16 +305,26 @@ html,body{
     font-size:18px;
 }
 
-/* FINAL */
+/* FINAL COM FOTO */
 
 .final{
-    background:#9b6b43;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url('cintia.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
     color:white;
 }
 
 .final-card{
     text-align:center;
     max-width:800px;
+    background:rgba(255,255,255,0.13);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:30px;
+    padding:40px 28px;
 }
 
 .final-card h2{
@@ -373,6 +374,10 @@ html,body{
     font-size:18px;
 }
 
+.final-card h2{
+    font-size:56px;
+}
+
 }
 
 </style>
@@ -380,44 +385,28 @@ html,body{
 
 <body>
 
-<!-- PÁGINA 1 -->
-
 <section class="page active" id="page1">
-
     <div class="envelope-wrapper">
-
         <div class="envelope-container" onclick="showPage(2)">
-
             <div class="envelope"></div>
-
             <div class="letter">
                 <h1>Haruo & Cintia</h1>
                 <p>Você recebeu um convite especial ❤️</p>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-<!-- PÁGINA 2 -->
-
 <section class="page hero" id="page2">
-
     <div class="hero-card">
 
         <img src="foto-noivos.jpg" class="couple-photo">
 
         <h1>Haruo & Cintia</h1>
 
-        <p>
-            Com alegria convidamos você para celebrar o nosso casamento
-        </p>
+        <p>Com alegria convidamos você para celebrar o nosso casamento</p>
 
-        <div class="date">
-            13/06/2026 às 10:45h
-        </div>
+        <div class="date">13/06/2026 às 10:45h</div>
 
         <p style="margin-top:16px;font-size:22px;">
             🍽️ Almoço oferecido pelos noivos às 12:00h
@@ -428,25 +417,14 @@ html,body{
         </p>
 
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
-
-            <a class="nav-btn" href="#" onclick="showPage(1)">
-                ← Voltar
-            </a>
-
-            <a class="nav-btn" href="#" onclick="showPage(3)">
-                Próxima Página ✨
-            </a>
-
+            <a class="nav-btn" href="#" onclick="showPage(1)">← Voltar</a>
+            <a class="nav-btn" href="#" onclick="showPage(3)">Próxima Página ✨</a>
         </div>
 
     </div>
-
 </section>
 
-<!-- PÁGINA 3 -->
-
 <section class="page" id="page3">
-
     <div class="content">
 
         <h2>Mensagem Especial</h2>
@@ -463,153 +441,80 @@ html,body{
         </div>
 
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
-
-            <a class="nav-btn" href="#" onclick="showPage(2)">
-                ← Voltar
-            </a>
-
-            <a class="nav-btn" href="#" onclick="showPage(4)">
-                Informações 💍
-            </a>
-
+            <a class="nav-btn" href="#" onclick="showPage(2)">← Voltar</a>
+            <a class="nav-btn" href="#" onclick="showPage(4)">Informações 💍</a>
         </div>
 
     </div>
-
 </section>
 
-<!-- PÁGINA 4 -->
-
 <section class="page" id="page4">
-
     <div class="content">
 
         <h2>Informações</h2>
 
         <div class="links-grid">
 
-            <!-- CONFIRMAR -->
-
             <div class="contact-card">
-
                 <div class="emoji">✅</div>
-
                 <h3>Confirmar Presença</h3>
-
-                <p>
-                    Informe quantas pessoas irão ❤️
-                </p>
+                <p>Confirme até 01/06/2026 ❤️</p>
 
                 <input type="number"
                        id="qtdPessoas"
                        placeholder="Quantidade de pessoas"
-                       style="
-                       width:100%;
-                       margin-top:14px;
-                       padding:14px;
-                       border-radius:14px;
-                       border:2px solid #d8c2ad;
-                       font-size:18px;
-                       text-align:center;
-                       ">
+                       style="width:100%;margin-top:14px;padding:14px;border-radius:14px;border:2px solid #d8c2ad;font-size:18px;text-align:center;">
 
                 <button class="copy-btn"
                         style="margin-top:16px;width:100%;"
                         onclick="confirmarPresenca()">
-
                     Confirmar pelo WhatsApp ✨
-
                 </button>
-
             </div>
-
-            <!-- LOCAL -->
 
             <a class="contact-card"
                href="https://maps.google.com/?q=Churrascaria+Boi+Dourado+Av.+Comendador+Franco+5085+Curitiba"
                target="_blank">
-
                 <div class="emoji">📍</div>
-
                 <h3>Local da Festa</h3>
-
-                <p>
-                    Churrascaria Boi Dourado<br>
-                    Curitiba/PR
-                </p>
-
+                <p>Churrascaria Boi Dourado<br>Curitiba/PR</p>
             </a>
 
-            <!-- NOIVO -->
-
             <a class="contact-card"
-               href="https://wa.me/5541999850591?text=Olá Haruo! Vim pelo convite ❤️"
+               href="https://wa.me/5541999850591?text=Ol%C3%A1%20Haruo!%20%E2%9D%A4%EF%B8%8F%0A%0ARecebi%20o%20convite%20do%20casamento%20e%20vim%20falar%20com%20voc%C3%AA.%20%F0%9F%92%8D%0A%0AEstou%20muito%20feliz%20por%20fazer%20parte%20desse%20momento%20especial.%20%E2%9C%A8"
                target="_blank">
-
                 <div class="emoji">🤵</div>
-
                 <h3>Fale com o Noivo</h3>
-
-                <p>
-                    Clique para conversar ❤️
-                </p>
-
+                <p>Clique para conversar com Haruo ❤️</p>
             </a>
 
-            <!-- NOIVA -->
-
             <a class="contact-card"
-               href="https://wa.me/5541988322892?text=Olá Cintia! Vim pelo convite ❤️"
+               href="https://wa.me/5541988322892?text=Ol%C3%A1%20Cintia!%20%E2%9D%A4%EF%B8%8F%0A%0ARecebi%20o%20convite%20do%20casamento%20e%20vim%20falar%20com%20voc%C3%AA.%20%F0%9F%92%8D%0A%0AEstou%20muito%20feliz%20por%20fazer%20parte%20desse%20momento%20especial.%20%E2%9C%A8"
                target="_blank">
-
                 <div class="emoji">👰</div>
-
                 <h3>Fale com a Noiva</h3>
-
-                <p>
-                    Clique para conversar ❤️
-                </p>
-
+                <p>Clique para conversar com Cintia ❤️</p>
             </a>
 
-            <!-- NOIVOS -->
-
             <a class="contact-card"
-               href="https://wa.me/5541988322892?text=Olá noivos! Vim pelo convite ❤️"
+               href="https://wa.me/5541988322892?text=Ol%C3%A1%20Haruo%20e%20Cintia!%20%E2%9D%A4%EF%B8%8F%0A%0ARecebi%20o%20convite%20do%20casamento%20e%20vim%20deixar%20uma%20mensagem%20para%20voc%C3%AAs.%20%F0%9F%92%8D%0A%0ADesejo%20que%20essa%20nova%20fase%20seja%20repleta%20de%20amor%2C%20uni%C3%A3o%20e%20muitas%20b%C3%AAn%C3%A7%C3%A3os.%20%E2%9C%A8"
                target="_blank">
-
                 <div class="emoji">💍</div>
-
                 <h3>Fale com os Noivos</h3>
-
-                <p>
-                    Clique para falar com os noivos ❤️
-                </p>
-
+                <p>Clique para falar com os noivos ❤️</p>
             </a>
 
         </div>
 
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
-
-            <a class="nav-btn" href="#" onclick="showPage(3)">
-                ← Voltar
-            </a>
-
-            <a class="nav-btn" href="#" onclick="showPage(5)">
-                Lista de Presentes 🎁
-            </a>
-
+            <a class="nav-btn" href="#" onclick="showPage(3)">← Voltar</a>
+            <a class="nav-btn" href="#" onclick="showPage(5)">Lista de Presentes 🎁</a>
         </div>
 
     </div>
-
 </section>
 
-<!-- PÁGINA 5 -->
-
 <section class="page" id="page5">
-
     <div class="content">
 
         <h2>Lista de Presentes</h2>
@@ -684,34 +589,21 @@ html,body{
         </div>
 
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
-
-            <a class="nav-btn" href="#" onclick="showPage(4)">
-                ← Voltar
-            </a>
-
-            <a class="nav-btn" href="#" onclick="showPage(6)">
-                Página Final ❤️
-            </a>
-
+            <a class="nav-btn" href="#" onclick="showPage(4)">← Voltar</a>
+            <a class="nav-btn" href="#" onclick="showPage(6)">Página Final ❤️</a>
         </div>
 
     </div>
-
 </section>
 
-<!-- FINAL -->
-
 <section class="page final" id="page6">
-
     <div class="final-card">
 
         <a class="nav-btn"
            href="#"
            onclick="showPage(5)"
            style="background:white;color:#9b6b43;margin-bottom:25px;">
-
             ← Voltar
-
         </a>
 
         <h2>Esperamos Você!</h2>
@@ -730,13 +622,11 @@ html,body{
         </div>
 
     </div>
-
 </section>
 
 <script>
 
 function showPage(pageNumber){
-
     const pages = document.querySelectorAll('.page');
 
     pages.forEach(page => {
@@ -744,11 +634,9 @@ function showPage(pageNumber){
     });
 
     document.getElementById('page' + pageNumber).classList.add('active');
-
 }
 
 function copiarPix(){
-
     const pix = document.getElementById('pixKey').innerText.trim();
 
     navigator.clipboard.writeText(pix);
@@ -760,23 +648,27 @@ function copiarPix(){
     setTimeout(()=>{
         msg.style.display = 'none';
     },2000);
-
 }
 
 function confirmarPresenca(){
 
     const qtd = document.getElementById('qtdPessoas').value;
 
-    let mensagem = `Olá! Confirmo minha presença no casamento ❤️`;
+    let mensagem =
+`Olá, Haruo e Cintia! ❤️
 
-    if(qtd){
-        mensagem += `\nQuantidade de pessoas: ${qtd}`;
-    }
+Recebi o convite do casamento e confirmo minha presença. 💍
 
-    const url = `https://wa.me/5541988322892?text=${encodeURIComponent(mensagem)}`;
+👥 Quantidade de pessoas: ${qtd || 1}
+
+Agradeço pelo convite e será uma alegria celebrar esse momento tão especial com vocês.
+
+📅 Confirmação enviada até 01/06/2026 ✨`;
+
+    const url =
+`https://wa.me/5541988322892?text=${encodeURIComponent(mensagem)}`;
 
     window.open(url,'_blank');
-
 }
 
 </script>
