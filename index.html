@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- PREVIEW WHATSAPP -->
-
 <meta property="og:title" content="Haruo & Cintia ❤️">
-
-<meta property="og:description"
-      content="Com alegria convidamos você para celebrar o nosso casamento ✨">
-
-<meta property="og:image"
-      content="https://djharuo.github.io/haruoecintia/foto-noivos.jpg">
-
-<meta property="og:url"
-      content="https://djharuo.github.io/haruoecintia/">
-
+<meta property="og:description" content="Com alegria convidamos você para celebrar o nosso casamento ✨">
+<meta property="og:image" content="https://djharuo.github.io/haruoecintia/foto-noivos.jpg">
+<meta property="og:url" content="https://djharuo.github.io/haruoecintia/">
 <meta property="og:type" content="website">
-
 <meta name="twitter:card" content="summary_large_image">
 
 <title>Haruo & Cintia</title>
@@ -27,12 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 html,body{
     width:100%;
@@ -50,32 +34,24 @@ html,body{
     height:100vh;
     overflow-y:auto;
     display:none;
-    padding:20px;
+    padding:18px;
     justify-content:center;
     align-items:center;
 }
 
 .page.active{
     display:flex;
-    animation:fade 0.8s ease;
+    animation:fade .6s ease;
 }
 
 @keyframes fade{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    from{opacity:0;transform:translateY(15px);}
+    to{opacity:1;transform:translateY(0);}
 }
 
 /* ENVELOPE */
 
-.envelope-wrapper{
-    text-align:center;
-}
+.envelope-wrapper{text-align:center;}
 
 .envelope-container{
     position:relative;
@@ -92,7 +68,7 @@ html,body{
     background:#d8b89c;
     border-radius:10px;
     overflow:hidden;
-    box-shadow:0 20px 45px rgba(0,0,0,0.25);
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
 }
 
 .envelope:before{
@@ -129,7 +105,7 @@ html,body{
     justify-content:center;
     align-items:center;
     text-align:center;
-    transition:0.6s;
+    transition:.6s;
     padding:20px;
 }
 
@@ -149,290 +125,344 @@ html,body{
     margin-top:8px;
 }
 
-/* HERO */
+/* FUNDOS */
 
 .hero{
     background:
-    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
     url('foto-noivos.jpg');
-
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
 }
-
-.hero-card{
-    background:rgba(255,255,255,0.13);
-    backdrop-filter:blur(8px);
-    border:1px solid rgba(255,255,255,0.25);
-    border-radius:30px;
-    padding:35px 24px;
-    max-width:680px;
-    width:100%;
-    text-align:center;
-    color:white;
-}
-
-.couple-photo{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid rgba(255,255,255,0.85);
-    box-shadow:0 10px 30px rgba(0,0,0,0.35);
-    margin-bottom:20px;
-}
-
-.hero-card h1{
-    font-family:'Great Vibes', cursive;
-    font-size:78px;
-    font-weight:normal;
-}
-
-.hero-card p{
-    font-size:24px;
-    margin-top:12px;
-}
-
-.date{
-    margin-top:20px;
-    font-size:30px;
-}
-
-/* PÁGINA 3 */
 
 .special-bg{
     background:
-    linear-gradient(rgba(0,0,0,0.48),rgba(0,0,0,0.48)),
+    linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),
     url('haruo.jpg');
-
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
 }
 
-.special-content{
-    background:rgba(255,255,255,0.13);
+.final{
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('cintia.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    color:white;
+}
+
+/* CARDS PRINCIPAIS */
+
+.hero-card,
+.special-content,
+.final-card{
+    background:rgba(255,255,255,.13);
     backdrop-filter:blur(8px);
-    border:1px solid rgba(255,255,255,0.25);
+    border:1px solid rgba(255,255,255,.25);
     border-radius:30px;
-    padding:40px 28px;
+    padding:34px 24px;
+    max-width:760px;
+    width:100%;
+    text-align:center;
     color:white;
 }
-
-.special-content h2{
-    color:white;
-}
-
-.special-content .verse{
-    color:#5f4633;
-}
-
-/* CONTENT */
 
 .content{
-    max-width:820px;
+    max-width:850px;
     width:100%;
     text-align:center;
 }
 
-.content h2{
-    font-family:'Great Vibes', cursive;
-    font-size:60px;
-    color:#9b6b43;
+.couple-photo{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid rgba(255,255,255,.85);
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
     margin-bottom:18px;
+}
+
+h1{
+    font-family:'Great Vibes', cursive;
+    font-size:76px;
     font-weight:normal;
 }
 
-.content p{
-    font-size:24px;
-    line-height:1.7;
+.content h2,
+.final-card h2{
+    font-family:'Great Vibes', cursive;
+    font-size:62px;
+    color:#9b6b43;
+    margin-bottom:16px;
+    font-weight:normal;
+}
+
+.special-content h2,
+.final-card h2{
+    color:white;
+}
+
+p{
+    font-size:23px;
+    line-height:1.55;
+}
+
+.date{
+    margin-top:18px;
+    font-size:30px;
 }
 
 .verse{
-    margin-top:28px;
+    margin-top:24px;
     background:white;
-    padding:24px;
+    color:#5f4633;
+    padding:22px;
     border-radius:22px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    font-size:22px;
-    line-height:1.6;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    font-size:21px;
+    line-height:1.5;
 }
 
-/* BUTTONS */
-
 .nav-btn{
-    margin-top:30px;
+    margin-top:24px;
     display:inline-block;
     background:#9b6b43;
     color:white;
     text-decoration:none;
-    padding:14px 26px;
+    padding:13px 24px;
     border-radius:40px;
-    font-size:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    font-size:19px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
     border:none;
     cursor:pointer;
 }
 
-/* CARDS */
+/* GRIDS */
 
 .links-grid,
 .gifts{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
-    margin-top:35px;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:16px;
+    margin-top:26px;
 }
 
 .contact-card,
 .card,
 .pix-box{
     background:white;
-    padding:24px 20px;
-    border-radius:24px;
+    padding:20px 16px;
+    border-radius:22px;
     text-decoration:none;
     color:#5f4633;
-    box-shadow:0 12px 35px rgba(0,0,0,0.08);
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
 }
 
 .emoji,
 .icon{
-    font-size:42px;
+    font-size:36px;
 }
 
 .contact-card h3,
 .card h3{
-    margin-top:14px;
-    font-size:28px;
+    margin-top:10px;
+    font-size:25px;
 }
 
 .contact-card p,
 .card p{
-    margin-top:10px;
-    font-size:20px;
-    line-height:1.5;
+    margin-top:8px;
+    font-size:18px;
+    line-height:1.35;
 }
 
 /* PIX */
 
 .pix-box{
-    margin-top:35px;
+    margin-top:26px;
 }
 
 .pix-box h3{
-    font-size:34px;
+    font-size:30px;
 }
 
 .pix-input{
     width:100%;
-    margin-top:16px;
-    padding:14px;
+    margin-top:12px;
+    padding:12px;
     border-radius:14px;
     border:2px solid #d4c1ae;
-    font-size:20px;
+    font-size:18px;
     text-align:center;
 }
 
 .pix-key{
-    margin-top:18px;
+    margin-top:12px;
     background:#f8f2eb;
-    padding:16px;
+    padding:12px;
     border-radius:14px;
-    font-size:15px;
+    font-size:13px;
     word-break:break-all;
 }
 
 .copy-btn{
-    margin-top:18px;
+    margin-top:12px;
     border:none;
     background:#9b6b43;
     color:white;
-    padding:14px 24px;
+    padding:12px 20px;
     border-radius:14px;
     cursor:pointer;
-    font-size:18px;
+    font-size:17px;
 }
 
 .copy-msg{
-    margin-top:12px;
+    margin-top:10px;
     color:green;
     display:none;
-    font-size:18px;
+    font-size:17px;
 }
 
-/* FINAL */
-
-.final{
-    background:
-    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
-    url('cintia.jpg');
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    color:white;
-}
-
-.final-card{
-    text-align:center;
-    max-width:800px;
-    background:rgba(255,255,255,0.13);
-    backdrop-filter:blur(8px);
-    border:1px solid rgba(255,255,255,0.25);
-    border-radius:30px;
-    padding:40px 28px;
-}
-
-.final-card h2{
-    font-family:'Great Vibes', cursive;
-    font-size:72px;
-    font-weight:normal;
-}
-
-.final-card p{
-    margin-top:16px;
-    font-size:24px;
-    line-height:1.7;
-}
-
-/* RESPONSIVO */
+/* CELULAR COMPACTO */
 
 @media(max-width:768px){
 
 .page{
-    padding:14px;
+    padding:8px;
+    overflow:hidden;
 }
 
-.hero-card h1{
-    font-size:58px;
+.hero-card,
+.special-content,
+.final-card{
+    padding:18px 14px;
+    border-radius:20px;
+    max-width:96%;
 }
 
-.hero-card p,
-.content p,
-.final-card p{
-    font-size:20px;
+.envelope-container{
+    width:270px;
+    height:185px;
 }
 
-.content h2{
-    font-size:48px;
-}
-
-.couple-photo{
-    width:120px;
-    height:120px;
+.envelope-container:hover .letter{
+    transform:translateY(-50px);
 }
 
 .letter h1{
-    font-size:42px;
+    font-size:36px;
 }
 
 .letter p{
-    font-size:18px;
+    font-size:15px;
 }
 
+.couple-photo{
+    width:82px;
+    height:82px;
+    margin-bottom:8px;
+    border-width:3px;
+}
+
+h1{
+    font-size:43px;
+}
+
+.content h2,
+.special-content h2,
 .final-card h2{
-    font-size:56px;
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+p,
+.hero-card p,
+.content p,
+.final-card p{
+    font-size:15.5px;
+    line-height:1.25;
+}
+
+.date{
+    font-size:21px;
+    margin-top:8px;
+}
+
+.verse{
+    margin-top:10px;
+    padding:10px;
+    font-size:14px;
+    line-height:1.25;
+    border-radius:14px;
+}
+
+.nav-btn{
+    margin-top:10px;
+    padding:8px 14px;
+    font-size:14px;
+}
+
+.links-grid,
+.gifts{
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin-top:12px;
+}
+
+.contact-card,
+.card,
+.pix-box{
+    padding:9px 7px;
+    border-radius:15px;
+}
+
+.emoji,
+.icon{
+    font-size:24px;
+}
+
+.contact-card h3,
+.card h3{
+    font-size:16px;
+    margin-top:4px;
+}
+
+.contact-card p,
+.card p{
+    font-size:12.5px;
+    line-height:1.15;
+    margin-top:3px;
+}
+
+.pix-box{
+    margin-top:10px;
+}
+
+.pix-box h3{
+    font-size:21px;
+}
+
+.pix-input{
+    margin-top:7px;
+    padding:8px;
+    font-size:14px;
+}
+
+.pix-key{
+    margin-top:7px;
+    padding:8px;
+    font-size:10px;
+}
+
+.copy-btn{
+    margin-top:7px;
+    padding:8px 12px;
+    font-size:14px;
 }
 
 }
@@ -442,83 +472,292 @@ html,body{
 
 <body>
 
-<!-- PÁGINA 1 -->
-
 <section class="page active" id="page1">
-
     <div class="envelope-wrapper">
-
         <div class="envelope-container" onclick="showPage(2)">
-
             <div class="envelope"></div>
-
             <div class="letter">
                 <h1>Haruo & Cintia</h1>
                 <p>Você recebeu um convite especial ❤️</p>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-<!-- PÁGINA 2 -->
-
 <section class="page hero" id="page2">
-
     <div class="hero-card">
 
         <img src="foto-noivos.jpg" class="couple-photo">
 
         <h1>Haruo & Cintia</h1>
 
-        <p>
-            Com alegria convidamos você para celebrar o nosso casamento
-        </p>
+        <p>Com alegria convidamos você para celebrar o nosso casamento</p>
 
-        <div class="date">
-            13/06/2026 às 10:45h
-        </div>
+        <div class="date">13/06/2026 às 10:45h</div>
 
-        <p style="margin-top:16px;font-size:22px;">
+        <p style="margin-top:10px;">
             🍽️ Almoço oferecido pelos noivos às 12:00h
         </p>
 
-        <p style="margin-top:18px;">
+        <p style="margin-top:10px;">
             Churrascaria Boi Dourado — Curitiba/PR
         </p>
 
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
+        <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px;">
+            <a class="nav-btn" href="#" onclick="showPage(1)">← Voltar</a>
+            <a class="nav-btn" href="#" onclick="showPage(3)">Próxima ✨</a>
+        </div>
 
-            <a class="nav-btn" href="#" onclick="showPage(1)">
-                ← Voltar
+    </div>
+</section>
+
+<section class="page special-bg" id="page3">
+    <div class="content special-content">
+
+        <h2>Mensagem Especial</h2>
+
+        <p>
+            O amor é paciente, o amor é bondoso.
+            Não inveja, não se vangloria, não se orgulha.
+            Tudo sofre, tudo crê, tudo espera, tudo suporta.
+        </p>
+
+        <div class="verse">
+            ❤️ “Assim, eles já não são dois, mas sim uma só carne.
+            Portanto, o que Deus uniu, ninguém separe.” — Mateus 19:6
+        </div>
+
+        <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px;">
+            <a class="nav-btn" href="#" onclick="showPage(2)">← Voltar</a>
+            <a class="nav-btn" href="#" onclick="showPage(4)">Informações 💍</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="page" id="page4">
+    <div class="content">
+
+        <h2>Informações</h2>
+
+        <div class="links-grid">
+
+            <div class="contact-card">
+                <div class="emoji">✅</div>
+                <h3>Confirmar Presença</h3>
+                <p>Confirme até 01/06/2026 ❤️</p>
+
+                <input type="number"
+                       id="qtdPessoas"
+                       placeholder="Qtd. pessoas"
+                       style="width:100%;margin-top:8px;padding:8px;border-radius:10px;border:2px solid #d8c2ad;font-size:14px;text-align:center;">
+
+                <button class="copy-btn"
+                        style="width:100%;"
+                        onclick="confirmarPresenca()">
+                    Confirmar ✨
+                </button>
+            </div>
+
+            <a class="contact-card"
+               href="https://maps.google.com/?q=Churrascaria+Boi+Dourado+Av.+Comendador+Franco+5085+Curitiba"
+               target="_blank">
+                <div class="emoji">📍</div>
+                <h3>Local</h3>
+                <p>Churrascaria Boi Dourado<br>Curitiba/PR</p>
             </a>
 
-            <a class="nav-btn" href="#" onclick="showPage(3)">
-                Próxima Página ✨
+            <a class="contact-card"
+               href="https://wa.me/5541999850591?text=Ol%C3%A1%20Haruo!%20%E2%9D%A4%EF%B8%8F%0A%0ARecebi%20o%20convite%20do%20casamento%20e%20vim%20falar%20com%20voc%C3%AA.%20%F0%9F%92%8D%0A%0AEstou%20muito%20feliz%20por%20fazer%20parte%20desse%20momento%20especial.%20%E2%9C%A8"
+               target="_blank">
+                <div class="emoji">🤵</div>
+                <h3>Noivo</h3>
+                <p>Fale com Haruo ❤️</p>
+            </a>
+
+            <a class="contact-card"
+               href="https://wa.me/5541988322892?text=Ol%C3%A1%20Cintia!%20%E2%9D%A4%EF%B8%8F%0A%0ARecebi%20o%20convite%20do%20casamento%20e%20vim%20falar%20com%20voc%C3%AA.%20%F0%9F%92%8D%0A%0AEstou%20muito%20feliz%20por%20fazer%20parte%20desse%20momento%20especial.%20%E2%9C%A8"
+               target="_blank">
+                <div class="emoji">👰</div>
+                <h3>Noiva</h3>
+                <p>Fale com Cintia ❤️</p>
+            </a>
+
+            <a class="contact-card"
+               href="https://wa.me/5541988322892?text=Ol%C3%A1%20Haruo%20e%20Cintia!%20%E2%9D%A4%EF%B8%8F%0A%0ARecebi%20o%20convite%20do%20casamento%20e%20vim%20deixar%20uma%20mensagem%20para%20voc%C3%AAs.%20%F0%9F%92%8D%0A%0ADesejo%20que%20essa%20nova%20fase%20seja%20repleta%20de%20amor%2C%20uni%C3%A3o%20e%20muitas%20b%C3%AAn%C3%A7%C3%A3os.%20%E2%9C%A8"
+               target="_blank">
+                <div class="emoji">💍</div>
+                <h3>Noivos</h3>
+                <p>Mensagem aos noivos ❤️</p>
             </a>
 
         </div>
 
-    </div>
+        <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px;">
+            <a class="nav-btn" href="#" onclick="showPage(3)">← Voltar</a>
+            <a class="nav-btn" href="#" onclick="showPage(5)">Presentes 🎁</a>
+        </div>
 
+    </div>
+</section>
+
+<section class="page" id="page5">
+    <div class="content">
+
+        <h2>Lista de Presentes</h2>
+
+        <p>
+            Sua presença já é nosso maior presente ❤️<br>
+            Mas se desejar nos abençoar, envie qualquer valor via PIX.
+        </p>
+
+        <div class="gifts">
+
+            <div class="card">
+                <div class="icon">✈️</div>
+                <h3>Lua de Mel</h3>
+                <p>Ajude nossa viagem ✨</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏡</div>
+                <h3>Novo Lar</h3>
+                <p>Ajude os noivos ❤️</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🍽️</div>
+                <h3>Jantar</h3>
+                <p>Um mimo especial 🍷</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛏️</div>
+                <h3>Enxoval</h3>
+                <p>Ajude nosso lar ✨</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🍳</div>
+                <h3>Cozinha</h3>
+                <p>Carinho especial ❤️</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">😂</div>
+                <h3>Não Posso Ir</h3>
+                <p>PIX perdoa 😄</p>
+            </div>
+
+        </div>
+
+        <div class="pix-box">
+
+            <h3>💳 PIX Copia e Cola</h3>
+
+            <input type="number"
+                   class="pix-input"
+                   placeholder="Digite o valor">
+
+            <div class="pix-key" id="pixKey">
+00020126490014BR.GOV.BCB.PIX0114561429770001060209Casamento5204000053039865802BR5914HARUO E CINTIA6008CURITIBA62130509Casamento6304762B
+            </div>
+
+            <button class="copy-btn" onclick="copiarPix()">
+                Copiar PIX ❤️
+            </button>
+
+            <div class="copy-msg" id="copyMsg">
+                PIX copiado com sucesso ✨
+            </div>
+
+        </div>
+
+        <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px;">
+            <a class="nav-btn" href="#" onclick="showPage(4)">← Voltar</a>
+            <a class="nav-btn" href="#" onclick="showPage(6)">Final ❤️</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="page final" id="page6">
+    <div class="final-card">
+
+        <h2>Esperamos Você!</h2>
+
+        <p>Será uma alegria compartilhar esse momento tão especial com você ❤️</p>
+
+        <p>
+            Com carinho,<br>
+            Haruo & Cintia ✨
+        </p>
+
+        <div class="verse">
+            “O amor nunca falha.” — 1 Coríntios 13:8 ❤️
+        </div>
+
+        <a class="nav-btn"
+           href="#"
+           onclick="showPage(5)"
+           style="background:white;color:#9b6b43;">
+            ← Voltar
+        </a>
+
+    </div>
 </section>
 
 <script>
-
 function showPage(pageNumber){
-
     const pages = document.querySelectorAll('.page');
+    const target = document.getElementById('page' + pageNumber);
+
+    if(!target){
+        alert('Página ' + pageNumber + ' não encontrada.');
+        return;
+    }
 
     pages.forEach(page => {
         page.classList.remove('active');
     });
 
-    document.getElementById('page' + pageNumber).classList.add('active');
-
+    target.classList.add('active');
 }
 
+function copiarPix(){
+    const pix = document.getElementById('pixKey').innerText.trim();
+
+    navigator.clipboard.writeText(pix);
+
+    const msg = document.getElementById('copyMsg');
+
+    msg.style.display = 'block';
+
+    setTimeout(()=>{
+        msg.style.display = 'none';
+    },2000);
+}
+
+function confirmarPresenca(){
+
+    const qtd = document.getElementById('qtdPessoas').value;
+
+    let mensagem =
+`Olá, Haruo e Cintia! ❤️
+
+Recebi o convite do casamento e confirmo minha presença. 💍
+
+👥 Quantidade de pessoas: ${qtd || 1}
+
+Agradeço pelo convite e será uma alegria celebrar esse momento tão especial com vocês.
+
+📅 Confirmação enviada até 01/06/2026 ✨`;
+
+    const url =
+`https://wa.me/5541988322892?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url,'_blank');
+}
 </script>
 
 </body>
