@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- PREVIEW WHATSAPP -->
+
+<meta property="og:title" content="Haruo & Cintia ❤️">
+
+<meta property="og:description"
+      content="Com alegria convidamos você para celebrar o nosso casamento ✨">
+
+<meta property="og:image"
+      content="https://djharuo.github.io/haruoecintia/foto-noivos.jpg">
+
+<meta property="og:url"
+      content="https://djharuo.github.io/haruoecintia/">
+
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
 
 <title>Haruo & Cintia</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 html,body{
     width:100%;
@@ -38,13 +61,21 @@ html,body{
 }
 
 @keyframes fade{
-    from{opacity:0;transform:translateY(20px);}
-    to{opacity:1;transform:translateY(0);}
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 /* ENVELOPE */
 
-.envelope-wrapper{text-align:center;}
+.envelope-wrapper{
+    text-align:center;
+}
 
 .envelope-container{
     position:relative;
@@ -124,6 +155,7 @@ html,body{
     background:
     linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
     url('foto-noivos.jpg');
+
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -167,12 +199,13 @@ html,body{
     font-size:30px;
 }
 
-/* PÁGINA 3 COM FOTO HARUO */
+/* PÁGINA 3 */
 
 .special-bg{
     background:
     linear-gradient(rgba(0,0,0,0.48),rgba(0,0,0,0.48)),
     url('haruo.jpg');
+
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -328,12 +361,13 @@ html,body{
     font-size:18px;
 }
 
-/* FINAL COM FOTO CINTIA */
+/* FINAL */
 
 .final{
     background:
     linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
     url('cintia.jpg');
+
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -402,33 +436,50 @@ html,body{
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- PÁGINA 1 -->
+
 <section class="page active" id="page1">
+
     <div class="envelope-wrapper">
+
         <div class="envelope-container" onclick="showPage(2)">
+
             <div class="envelope"></div>
+
             <div class="letter">
                 <h1>Haruo & Cintia</h1>
                 <p>Você recebeu um convite especial ❤️</p>
             </div>
+
         </div>
+
     </div>
+
 </section>
 
+<!-- PÁGINA 2 -->
+
 <section class="page hero" id="page2">
+
     <div class="hero-card">
 
         <img src="foto-noivos.jpg" class="couple-photo">
 
         <h1>Haruo & Cintia</h1>
 
-        <p>Com alegria convidamos você para celebrar o nosso casamento</p>
+        <p>
+            Com alegria convidamos você para celebrar o nosso casamento
+        </p>
 
-        <div class="date">13/06/2026 às 10:45h</div>
+        <div class="date">
+            13/06/2026 às 10:45h
+        </div>
 
         <p style="margin-top:16px;font-size:22px;">
             🍽️ Almoço oferecido pelos noivos às 12:00h
@@ -439,215 +490,25 @@ html,body{
         </p>
 
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
-            <a class="nav-btn" href="#" onclick="showPage(1)">← Voltar</a>
-            <a class="nav-btn" href="#" onclick="showPage(3)">Próxima Página ✨</a>
-        </div>
 
-    </div>
-</section>
-
-<section class="page special-bg" id="page3">
-    <div class="content special-content">
-
-        <h2>Mensagem Especial</h2>
-
-        <p>
-            O amor é paciente, o amor é bondoso.
-            Não inveja, não se vangloria, não se orgulha.
-            Tudo sofre, tudo crê, tudo espera, tudo suporta.
-        </p>
-
-        <div class="verse">
-            ❤️ “Assim, eles já não são dois, mas sim uma só carne.
-            Portanto, o que Deus uniu, ninguém separe.” — Mateus 19:6
-        </div>
-
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
-            <a class="nav-btn" href="#" onclick="showPage(2)">← Voltar</a>
-            <a class="nav-btn" href="#" onclick="showPage(4)">Informações 💍</a>
-        </div>
-
-    </div>
-</section>
-
-<section class="page" id="page4">
-    <div class="content">
-
-        <h2>Informações</h2>
-
-        <div class="links-grid">
-
-            <div class="contact-card">
-                <div class="emoji">✅</div>
-                <h3>Confirmar Presença</h3>
-                <p>Confirme até 01/06/2026 ❤️</p>
-
-                <input type="number"
-                       id="qtdPessoas"
-                       placeholder="Quantidade de pessoas"
-                       style="width:100%;margin-top:14px;padding:14px;border-radius:14px;border:2px solid #d8c2ad;font-size:18px;text-align:center;">
-
-                <button class="copy-btn"
-                        style="margin-top:16px;width:100%;"
-                        onclick="confirmarPresenca()">
-                    Confirmar pelo WhatsApp ✨
-                </button>
-            </div>
-
-            <a class="contact-card"
-               href="https://maps.google.com/?q=Churrascaria+Boi+Dourado+Av.+Comendador+Franco+5085+Curitiba"
-               target="_blank">
-                <div class="emoji">📍</div>
-                <h3>Local da Festa</h3>
-                <p>Churrascaria Boi Dourado<br>Curitiba/PR</p>
+            <a class="nav-btn" href="#" onclick="showPage(1)">
+                ← Voltar
             </a>
 
-            <a class="contact-card"
-               href="https://wa.me/5541999850591?text=Ol%C3%A1%20Haruo!%20%E2%9D%A4%EF%B8%8F%0A%0ARecebi%20o%20convite%20do%20casamento%20e%20vim%20falar%20com%20voc%C3%AA.%20%F0%9F%92%8D%0A%0AEstou%20muito%20feliz%20por%20fazer%20parte%20desse%20momento%20especial.%20%E2%9C%A8"
-               target="_blank">
-                <div class="emoji">🤵</div>
-                <h3>Fale com o Noivo</h3>
-                <p>Clique para conversar com Haruo ❤️</p>
-            </a>
-
-            <a class="contact-card"
-               href="https://wa.me/5541988322892?text=Ol%C3%A1%20Cintia!%20%E2%9D%A4%EF%B8%8F%0A%0ARecebi%20o%20convite%20do%20casamento%20e%20vim%20falar%20com%20voc%C3%AA.%20%F0%9F%92%8D%0A%0AEstou%20muito%20feliz%20por%20fazer%20parte%20desse%20momento%20especial.%20%E2%9C%A8"
-               target="_blank">
-                <div class="emoji">👰</div>
-                <h3>Fale com a Noiva</h3>
-                <p>Clique para conversar com Cintia ❤️</p>
-            </a>
-
-            <a class="contact-card"
-               href="https://wa.me/5541988322892?text=Ol%C3%A1%20Haruo%20e%20Cintia!%20%E2%9D%A4%EF%B8%8F%0A%0ARecebi%20o%20convite%20do%20casamento%20e%20vim%20deixar%20uma%20mensagem%20para%20voc%C3%AAs.%20%F0%9F%92%8D%0A%0ADesejo%20que%20essa%20nova%20fase%20seja%20repleta%20de%20amor%2C%20uni%C3%A3o%20e%20muitas%20b%C3%AAn%C3%A7%C3%A3os.%20%E2%9C%A8"
-               target="_blank">
-                <div class="emoji">💍</div>
-                <h3>Fale com os Noivos</h3>
-                <p>Clique para falar com os noivos ❤️</p>
+            <a class="nav-btn" href="#" onclick="showPage(3)">
+                Próxima Página ✨
             </a>
 
         </div>
 
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
-            <a class="nav-btn" href="#" onclick="showPage(3)">← Voltar</a>
-            <a class="nav-btn" href="#" onclick="showPage(5)">Lista de Presentes 🎁</a>
-        </div>
-
     </div>
-</section>
 
-<section class="page" id="page5">
-    <div class="content">
-
-        <h2>Lista de Presentes</h2>
-
-        <p>
-            Sua presença já é nosso maior presente ❤️
-            <br>
-            Mas se desejar nos abençoar ainda mais,
-            você pode enviar qualquer valor via PIX.
-        </p>
-
-        <div class="gifts">
-
-            <div class="card">
-                <div class="icon">✈️</div>
-                <h3>Lua de Mel</h3>
-                <p>Ajude nossa viagem ✨</p>
-            </div>
-
-            <div class="card">
-                <div class="icon">🏡</div>
-                <h3>Novo Lar</h3>
-                <p>Ajude os noivos ❤️</p>
-            </div>
-
-            <div class="card">
-                <div class="icon">🍽️</div>
-                <h3>Jantar Especial</h3>
-                <p>Um mimo especial 🍷</p>
-            </div>
-
-            <div class="card">
-                <div class="icon">🛏️</div>
-                <h3>Enxoval</h3>
-                <p>Ajude nosso lar ✨</p>
-            </div>
-
-            <div class="card">
-                <div class="icon">🍳</div>
-                <h3>Cozinha Nova</h3>
-                <p>Um carinho especial ❤️</p>
-            </div>
-
-            <div class="card">
-                <div class="icon">😂</div>
-                <h3>Não Posso Ir</h3>
-                <p>Mande um PIX e será perdoado 😄</p>
-            </div>
-
-        </div>
-
-        <div class="pix-box">
-
-            <h3>💳 PIX Copia e Cola</h3>
-
-            <input type="number"
-                   class="pix-input"
-                   placeholder="Digite o valor que deseja presentear">
-
-            <div class="pix-key" id="pixKey">
-00020126490014BR.GOV.BCB.PIX0114561429770001060209Casamento5204000053039865802BR5914HARUO E CINTIA6008CURITIBA62130509Casamento6304762B
-            </div>
-
-            <button class="copy-btn" onclick="copiarPix()">
-                Copiar PIX ❤️
-            </button>
-
-            <div class="copy-msg" id="copyMsg">
-                PIX copiado com sucesso ✨
-            </div>
-
-        </div>
-
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
-            <a class="nav-btn" href="#" onclick="showPage(4)">← Voltar</a>
-            <a class="nav-btn" href="#" onclick="showPage(6)">Página Final ❤️</a>
-        </div>
-
-    </div>
-</section>
-
-<section class="page final" id="page6">
-    <div class="final-card">
-
-        <a class="nav-btn"
-           href="#"
-           onclick="showPage(5)"
-           style="background:white;color:#9b6b43;margin-bottom:25px;">
-            ← Voltar
-        </a>
-
-        <h2>Esperamos Você!</h2>
-
-        <p>
-            Será uma alegria compartilhar esse momento tão especial com você ❤️
-        </p>
-
-        <p>
-            Com carinho,<br>
-            Haruo & Cintia ✨
-        </p>
-
-        <div class="verse" style="color:#5f4633;">
-            “O amor nunca falha.” — 1 Coríntios 13:8 ❤️
-        </div>
-
-    </div>
 </section>
 
 <script>
+
 function showPage(pageNumber){
+
     const pages = document.querySelectorAll('.page');
 
     pages.forEach(page => {
@@ -655,42 +516,9 @@ function showPage(pageNumber){
     });
 
     document.getElementById('page' + pageNumber).classList.add('active');
+
 }
 
-function copiarPix(){
-    const pix = document.getElementById('pixKey').innerText.trim();
-
-    navigator.clipboard.writeText(pix);
-
-    const msg = document.getElementById('copyMsg');
-
-    msg.style.display = 'block';
-
-    setTimeout(()=>{
-        msg.style.display = 'none';
-    },2000);
-}
-
-function confirmarPresenca(){
-
-    const qtd = document.getElementById('qtdPessoas').value;
-
-    let mensagem =
-`Olá, Haruo e Cintia! ❤️
-
-Recebi o convite do casamento e confirmo minha presença. 💍
-
-👥 Quantidade de pessoas: ${qtd || 1}
-
-Agradeço pelo convite e será uma alegria celebrar esse momento tão especial com vocês.
-
-📅 Confirmação enviada até 01/06/2026 ✨`;
-
-    const url =
-`https://wa.me/5541988322892?text=${encodeURIComponent(mensagem)}`;
-
-    window.open(url,'_blank');
-}
 </script>
 
 </body>
